@@ -1,0 +1,36 @@
+
+  .video-container {
+    text-align: center;
+  }
+
+  .video-container iframe {
+    display: inline-block;
+    vertical-align: top;
+    margin: 0;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9;
+    max-width: 853px;
+  }
+
+  /* Для устройств с шириной экрана меньше 600px (смартфоны) */
+  @media (max-width: 600px) {
+    .video-container iframe {
+      max-width: 100%; /* Занимает всю ширину экрана */
+    }
+  }
+
+  /* Для устройств с шириной экрана от 601px до 1024px (планшеты) */
+  @media (min-width: 601px) and (max-width: 1024px) {
+    .video-container iframe {
+      max-width: 90%; /* Немного уменьшаем ширину для планшетов */
+    }
+  }
+
+  /* Для устройств с шириной экрана больше 1024px (десктопы) */
+  @media (min-width: 1025px) {
+    .video-container iframe {
+      max-width: 853px; /* Фиксированная ширина для десктопов */
+    }
+  }
+
